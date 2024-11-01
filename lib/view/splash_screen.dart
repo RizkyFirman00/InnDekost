@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:inndekost/view/login_page.dart';
+import 'package:inndekost/view/splash_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Future.delayed(Duration(seconds: 2), () {
       // TODO isLogin Function
-      Get.off(() => const LoginPage());
+      Get.off(() => const SplashPage());
     });
     super.initState();
   }
