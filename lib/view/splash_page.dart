@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:inndekost/view/admin/admin_login.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -63,6 +65,9 @@ class _SplashPageState extends State<SplashPage> {
                           alignment: Alignment.center,
                           child: Text(
                             "EXPLORE NOW",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold
+                            ),
                           ),
                         ),
                         style: ButtonStyle(
@@ -108,13 +113,18 @@ class _SplashPageState extends State<SplashPage> {
                   Row(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.off(() => const AdminLogin());
+                        },
                         child: Container(
                           width: MediaQuery.of(context).size.width - 290,
                           height: 50,
                           alignment: Alignment.center,
                           child: Text(
-                            "Join Us",
+                            "JOIN US",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold
+                            ),
                           ),
                         ),
                         style: ButtonStyle(
